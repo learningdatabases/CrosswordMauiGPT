@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrosswordMauiGPT.MainPage">
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid x:Name="CrosswordGrid" Grid.Column="0" Grid.Row="0" Padding="10">
+                <!-- Crossword grid will be added dynamically -->
+            </Grid>
+
+            <StackLayout Grid.Column="1" Grid.Row="0" Padding="10">
+                <ScrollView>
+                    <StackLayout x:Name="TermsStack">
+                        <!-- Input fields for terms and definitions will be added dynamically -->
+                    </StackLayout>
+                </ScrollView>
+
+                <Button Text="Generate Crossword" Clicked="OnGenerateCrosswordClicked" Margin="10"/>
+                <Button Text="Check Solutions" Clicked="OnCheckSolutionsClicked" Margin="10"/>
+                <Button Text="Show Solutions" Clicked="OnShowSolutionsClicked" Margin="10"/>
+            </StackLayout>
+
+            <StackLayout Grid.Column="0" Grid.Row="1" Padding="10">
+                <Label Text="Definitions:" FontSize="20" />
+                <ScrollView>
+                    <StackLayout x:Name="DefinitionsStack">
+                        <!-- Definitions will be displayed here -->
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+        </Grid>
+    </ContentPage>
+
+
+
+
+
+
